@@ -17,7 +17,7 @@ export const { resultado } = listBanksSlice.actions;
 
 export default listBanksSlice.reducer;
 
-export const fetchAllBanks = (dispatch: any) => {
+export const fetchAllBanks = (dispatch: Function) => {
   axios
     .get(`https://dev.obtenmas.com/catom/api/challenge/banks`)
     .then((response: { data: [] }) => {
