@@ -1,17 +1,18 @@
 import React from "react";
-import { store } from "./components/store/store";
-import { Provider } from "react-redux";
-import "./App.css";
-import CardBank from "./components/Card";
 import Body from "./components/Body";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-function App() {
+import "./App.scss";
+
+const App = () => {
   return (
-    <Provider className="App" store={store}>
+    <div className="App">
+      <Header />
       <Body />
-      <CardBank />
-    </Provider>
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;
