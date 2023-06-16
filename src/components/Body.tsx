@@ -1,21 +1,21 @@
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../components/store/reducer";
-import { fetchAllproducts } from "./store/slices/searchSlice";
-import CardBank from "./Card";
 import { Col, Row, Skeleton } from "antd";
+import { useAppDispatch, useAppSelector } from "../components/store/reducer";
+import { fetchAllBanks } from "./store/slices/listBanksSlice";
+import CardBank from "./Card";
 
 const BodyComponent = () => {
-  const details = useAppSelector((state) => state.todopago.banks.results);
+  const allBanks = useAppSelector((state) => state.yaganaste.banks.results);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    dispatch(fetchAllproducts);
+    dispatch(fetchAllBanks);
   }, [dispatch]);
 
   return (
     <Row>
-      {details !== undefined ? (
-        details.map((bank: any) => {
+      {allBanks !== undefined ? (
+        allBanks.map((bank: any) => {
           return (
             <Col xs={24} sm={12} md={12} lg={8} key={bank.age}>
               <CardBank

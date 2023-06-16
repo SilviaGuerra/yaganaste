@@ -1,10 +1,10 @@
 import { combineReducers } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "./store";
-import searchSlice from "./slices/searchSlice";
+import ListBanks from "./slices/listBanksSlice";
 
 const rootReducer = combineReducers({
-  banks: searchSlice,
+  banks: ListBanks,
 });
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();

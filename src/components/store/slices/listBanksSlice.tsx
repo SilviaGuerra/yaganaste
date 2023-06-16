@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const searchSlice = createSlice({
+export const listBanksSlice = createSlice({
   name: "bancos",
   initialState: {
     results: [],
@@ -13,11 +13,11 @@ export const searchSlice = createSlice({
   },
 });
 
-export const { resultado } = searchSlice.actions;
+export const { resultado } = listBanksSlice.actions;
 
-export default searchSlice.reducer;
+export default listBanksSlice.reducer;
 
-export const fetchAllproducts = (dispatch: any) => {
+export const fetchAllBanks = (dispatch: any) => {
   axios
     .get(`https://dev.obtenmas.com/catom/api/challenge/banks`)
     .then((response: any) => {

@@ -13,7 +13,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({
   reducer: {
-    todopago: persistedReducer,
+    yaganaste: persistedReducer,
   },
 });
 
