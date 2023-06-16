@@ -20,8 +20,8 @@ export default listBanksSlice.reducer;
 export const fetchAllBanks = (dispatch: any) => {
   axios
     .get(`https://dev.obtenmas.com/catom/api/challenge/banks`)
-    .then((response: any) => {
+    .then((response: { data: [] }) => {
       dispatch(resultado(response.data));
     })
-    .catch((error: any) => console.log(error, "error"));
+    .catch((error: string) => console.log(error, "error"));
 };
