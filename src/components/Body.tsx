@@ -5,7 +5,7 @@ import CardBank from "./Card";
 import { Col, Row, Skeleton } from "antd";
 
 const BodyComponent = () => {
-  const details = useAppSelector((state) => state.todopago.results);
+  const details = useAppSelector((state) => state.todopago.banks.results);
   const dispatch = useAppDispatch();
 
   useEffect(() => {
