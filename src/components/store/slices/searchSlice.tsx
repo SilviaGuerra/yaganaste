@@ -8,7 +8,6 @@ export const searchSlice = createSlice({
   },
   reducers: {
     resultado: (state, action) => {
-      console.log("state", action.payload);
       state.results = action.payload;
     },
   },
