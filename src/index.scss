@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'chalet_london';
+  src: url('../src/assets/font/chalet_london_nineteen_sixty_font-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: regular;
+}
+
+body {
+  margin: 0;
+  font-family: 'chalet_london' !important;
+  font-size: 20px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+code {
+  font-family: 'chalet_london';
+}
